@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold Chain Manager Document</title>
+    <style>
+      #ethdoc-viewer {
+        font-size: 0.8em;
+        padding: 1em;
+      }
+      #ethdoc-viewer .lead {
+        font-size: 1em;
+      }
+      #ethdoc-viewer table {
+        width: 50%;
+      }
+      #ethdoc-viewer hr {
+        margin: 0;
+        margin-bottom: 0.5rem;
+      }
+      #ethdoc-viewer p {
+        margin-bottom: 0.5rem;
+      }
+      body {
+        background-color: #222336;
+        font-family: sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      table,
+      tr,
+      td {
+        color: #fff;
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      hr {
+        border-color: #1f1f31;
+        opacity: 0.2;
+      }
+      p {
+        opacity: 0.5;
+        font-weight: normal;
+      }
+      table {
+        border: 1px solid #fff;
+        text-align: left;
+        border-collapse: collapse;
+      }
+      table thead tr th {
+        padding: 10px 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      table tbody tr td {
+        padding: 10px 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ethdoc-viewer">
+      <h3>GoldChainManager</h3>
+
+      <br />
+      <p><strong>Functions</strong></p>
+
+      <hr />
+      <h6>fallback</h6>
+
+      <p><strong>**Add Documentation for the method here**</strong></p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>buyBooster</h6>
+
+      <p>
+        User can buy booster, and amount of booster price transfer from user to
+        contract. Before creation of booster, this method will pay all due
+        upkeep amount of owner and claim all amount of owner's chains
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>boosterId</td>
+            <td>uint256</td>
+            <td>Created Booster id</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>calculateAllGoldReward</h6>
+
+      <p>
+        calculateAllGoldReward: Calculates reward of all gold chains of user.
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_rewardToMint</td>
+            <td>uint256</td>
+            <td>Calculated all reward of chains to mint</td>
+          </tr>
+          <tr>
+            <td>_rewardToTransfer</td>
+            <td>uint256</td>
+            <td>Calculated all reward of chains to transfer</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>calculateRewardsGold</h6>
+
+      <p>calculateRewardsGold: Calculates reward of specific gold chain.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>rewardToMint</td>
+            <td>uint256</td>
+            <td>Calculated reward of chain to Mint</td>
+          </tr>
+          <tr>
+            <td>rewardToTransfer</td>
+            <td>uint256</td>
+            <td>Final amount to transfer</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>calculateRoi</h6>
+
+      <p>Calculates ROI of specific token id.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>roiPercent</td>
+            <td>uint256</td>
+            <td>ROI Percentage</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>claimAllGold</h6>
+
+      <p>
+        claimAllGold: Claims reward of all gold chain of user, and transfer alx
+        token to owner of chains.
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_totalClaimedAmount</td>
+            <td>uint256</td>
+            <td>Total claimed amount of chains</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>claimRewardsGold</h6>
+
+      <p>
+        claimRewardsGold: Claim amount of chain and transfer alx token to owner
+        of chain.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_claimedAmount</td>
+            <td>uint256</td>
+            <td>Claimed amount of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>compoundSilverChain</h6>
+
+      <p>
+        compoundSilverChain: To compound silver chain, this method claim user's
+        chains reward, add booster enhancement in reward amount if user have
+        booster, without claim tax deduction. Will update claim amount of silver
+        chains.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>Name of chain</td>
+          </tr>
+          <tr>
+            <td>numberOfCompounds</td>
+            <td>uint256</td>
+            <td>Number of chains to create</td>
+          </tr>
+          <tr>
+            <td>tokenAmount</td>
+            <td>uint256</td>
+            <td>Remaining Token amount to compound chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>createGoldChain</h6>
+
+      <p>
+        createGoldChain: To create Gold chain this method transfer required
+        token amount from user to this contract and burn Required silver chains.
+        At time of creation it emits an event chainCreated with User's address,
+        name of chain and token Id of chain.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>chains</td>
+            <td>uint256[]</td>
+            <td>Silver chain token ids array</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>Name of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>createMultipleGoldChain</h6>
+
+      <p>
+        createMultipleGoldChain: To create multiple Gold chain this method
+        transfer required tokens amount from user to this contract and burn
+        Required silver chains. At time of creation it emits an event
+        chainCreated with User's address, name of chain and token Id of chain.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>chains</td>
+            <td>uint256[]</td>
+            <td>Silver chain token ids array</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>Name of chain</td>
+          </tr>
+          <tr>
+            <td>numberOfGoldChains</td>
+            <td>uint256</td>
+            <td>Number of chains to create</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>getALXBalance</h6>
+
+      <p>Returns ALX token balance of contract.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>alxBalance</td>
+            <td>uint256</td>
+            <td>ALX token Balance</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getAlxToUsdtRate</h6>
+
+      <p>Returns Alx to USDT rate</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_alxToUsdtRate</td>
+            <td>uint256</td>
+            <td>Returns Alx to USDT rate</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getAlxToken</h6>
+
+      <p>Returns Alx Token address</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_alxToken</td>
+            <td>address</td>
+            <td>Alx Token address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getBooster</h6>
+
+      <p>Returns address of Booster contract.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_booster</td>
+            <td>address</td>
+            <td>Booster contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getBoosterPrice</h6>
+
+      <p>Returns price to create Booster.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_boosterPrice</td>
+            <td>uint256</td>
+            <td>Booster price</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getDay</h6>
+
+      <p>Returns days from deployed silver chain manager to today.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_days</td>
+            <td>uint256</td>
+            <td>Returns overdue days of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getGoldChainAddress</h6>
+
+      <p>Returns Gold chain address</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldChainAddress</td>
+            <td>address</td>
+            <td>Gold chain address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getGoldClaimTax</h6>
+
+      <p>Returns Gold claim tax amount</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldClaimTax</td>
+            <td>uint256</td>
+            <td>Gold claim tax amount</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getGoldCreationFeeToken</h6>
+
+      <p>Returns fee amount to create gold chain</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldCreationFeeToken</td>
+            <td>uint256</td>
+            <td>Gold chain creation feee</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getGoldRewardsPerPeriod</h6>
+
+      <p>Returns gold reward per period.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldRewardsPerPeriod</td>
+            <td>uint256</td>
+            <td>Returns reward per period</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getGoldUpkeepCycle</h6>
+
+      <p>Returns gold upkeep cycle.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_upKeepCycleGold</td>
+            <td>uint256</td>
+            <td>Upkeep cycle in days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getOverdueDays</h6>
+
+      <p>Returns over due days of specific chain.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>token Id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_days</td>
+            <td>uint256</td>
+            <td>Returns overdue days of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getRequiredSilverChains</h6>
+
+      <p>Returns gold upkeep cycle.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_requiredSilverChain</td>
+            <td>uint256</td>
+            <td>Upkeep cycle in days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getRewardPeriod</h6>
+
+      <p>Returns Reward period time</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_rewardPeriod</td>
+            <td>uint256</td>
+            <td>Reward period</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getRoiLimit</h6>
+
+      <p>Returns ROI Limit for chains.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_roiLimit</td>
+            <td>uint256</td>
+            <td>ROI Limit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getSettingContract</h6>
+
+      <p>Returns Setting contract address.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_settingContract</td>
+            <td>address</td>
+            <td>Setting contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getSilverChainAddress</h6>
+
+      <p>Returns Silver chain address</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_silverChainAddress</td>
+            <td>address</td>
+            <td>Silver chain address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getTokenLastActionDay</h6>
+
+      <p>Returns Last action day of user.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>token Id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_lastDay</td>
+            <td>uint256</td>
+            <td>Last action day</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getTokenUpKeepFeeGold</h6>
+
+      <p>Returns upkeep amount of specfic gold chain of user.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>upkeepFee</td>
+            <td>uint256</td>
+            <td>Upkeep fee amount of gold chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getUSDTBalance</h6>
+
+      <p>Returns USDT token balance of contract.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>usdtBalance</td>
+            <td>uint256</td>
+            <td>USDT token Balance</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getUpKeepDetails</h6>
+
+      <p>
+        Returns upkeep detail of specific chain. if upkeep not due then returns
+        "0", and upkeep due then returns time.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>token Id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>time</td>
+            <td>uint256</td>
+            <td>Returns upkeep time of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getUpKeepFeeAllGold</h6>
+
+      <p>Returns upkeep amount of all gold chains of user.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_upkeepFeeAll</td>
+            <td>uint256</td>
+            <td>Total Upkeep amount of all gold chains</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getUsdt</h6>
+
+      <p>Returns USDT Token address</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_usdt</td>
+            <td>address</td>
+            <td>USDT Token address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getUserBoosters</h6>
+
+      <p>Returns Booster Ids of user</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>user</td>
+            <td>address</td>
+            <td>User address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>userBoosts</td>
+            <td>uint256[]</td>
+            <td>Booster Id array</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getUserLastActionDay</h6>
+
+      <p>Returns Last action day of user.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>user</td>
+            <td>address</td>
+            <td>User address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_lastDay</td>
+            <td>uint256</td>
+            <td>Last action day</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>initialize</h6>
+
+      <p>
+        Initialize: Deploy Alchemic Gold Chain Manager and set the basic values
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_alxToken</td>
+            <td>address</td>
+            <td>Contract address of Alx token</td>
+          </tr>
+          <tr>
+            <td>_usdt</td>
+            <td>address</td>
+            <td>Contract address of USDT token</td>
+          </tr>
+          <tr>
+            <td>_silverChainManager</td>
+            <td>address</td>
+            <td>Contract address of Alchemic Silver Chain Manager</td>
+          </tr>
+          <tr>
+            <td>_silverChainAddress</td>
+            <td>address</td>
+            <td>Contract address of Alchemic Silver Chain</td>
+          </tr>
+          <tr>
+            <td>_goldChainAddress</td>
+            <td>address</td>
+            <td>Contract address of Alchemic Gold Chain</td>
+          </tr>
+          <tr>
+            <td>_booster</td>
+            <td>address</td>
+            <td>Booster Contract address</td>
+          </tr>
+          <tr>
+            <td>_settingContract</td>
+            <td>address</td>
+            <td>Setting Contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>isEligible</h6>
+
+      <p>Returns Eligibility of user to create gold chain.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>user</td>
+            <td>address</td>
+            <td>User address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_requiredSilverChainStatus</td>
+            <td>bool</td>
+            <td>Upkeep paid or unpaid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>isUpKeepPaid</h6>
+
+      <p>Returns upkeep amount of specfic silver chain is paid or unpaid.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>upkeepStatus</td>
+            <td>bool</td>
+            <td>Upkeep paid or unpaid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>owner</h6>
+
+      <p>Returns the address of the current owner.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>paused</h6>
+
+      <p>Returns true if the contract is paused, and false otherwise.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>bool</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>payUpKeepFeeAllGold</h6>
+
+      <p>
+        User pay upkeep of all gold chains. And amount of total upkeep transfer
+        from user to contract
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>payUpKeepFeeGold</h6>
+
+      <p>
+        User pay upkeep of specific gold chain. And amount of upkeep transfer
+        from user to contract
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>proxiableUUID</h6>
+
+      <p>
+        Implementation of the ERC1822 {proxiableUUID} function. This returns the
+        storage slot used by the implementation. It is used to validate that the
+        this implementation remains valid after an upgrade. IMPORTANT: A proxy
+        pointing at a proxiable contract should not be considered proxiable
+        itself, because this risks bricking a proxy that upgrades to it, by
+        delegating to itself until out of gas. Thus it is critical that this
+        function revert if invoked through a proxy. This is guaranteed by the
+        `notDelegated` modifier.
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>bytes32</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>renounceOwnership</h6>
+
+      <p>
+        Leaves the contract without owner. It will not be possible to call
+        `onlyOwner` functions anymore. Can only be called by the current owner.
+        NOTE: Renouncing ownership will leave the contract without an owner,
+        thereby removing any functionality that is only available to the owner.
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setAlxToUsdtRate</h6>
+
+      <p>Sets Alx to USDT rate. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_alxToUsdtRate</td>
+            <td>uint256</td>
+            <td>Returns Alx to USDT rate</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setAlxToken</h6>
+
+      <p>Sets Alx token address. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_alxToken</td>
+            <td>address</td>
+            <td>Alx Token address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setBooster</h6>
+
+      <p>
+        Sets Booster contract address. Only setting contract can set this value
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_booster</td>
+            <td>address</td>
+            <td>Booster contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setBoosterPrice</h6>
+
+      <p>Sets Booster price value. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_boosterPrice</td>
+            <td>uint256</td>
+            <td>Booster price value</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setGoldChainAddress</h6>
+
+      <p>Sets Gold chain address. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldChainAddress</td>
+            <td>address</td>
+            <td>Gold chain address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setGoldClaimTax</h6>
+
+      <p>
+        Sets Claim tax of gold chain value. Only setting contract can set this
+        value
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldClaimTax</td>
+            <td>uint256</td>
+            <td>Claim tax of gold chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setGoldCreationFeeToken</h6>
+
+      <p>
+        Sets Gold chain creation fee value. Only setting contract can set this
+        value
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldCreationFeeToken</td>
+            <td>uint256</td>
+            <td>Gold chain creation fee</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setGoldRewardsPerPeriod</h6>
+
+      <p>Returns gold reward per period.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldRewardsPerPeriod</td>
+            <td>uint256</td>
+            <td>Returns reward per period</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setGoldUpkeepCycle</h6>
+
+      <p>Sets gold upkeep cycle. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_upKeepCycleGold</td>
+            <td>uint256</td>
+            <td>Upkeep cycle in days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setRequiredSilverChains</h6>
+
+      <p>Sets gold upkeep cycle. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_requiredSilverChain</td>
+            <td>uint256</td>
+            <td>Upkeep cycle in days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setRewardPeriod</h6>
+
+      <p>Sets Reward period value. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_rewardPeriod</td>
+            <td>uint256</td>
+            <td>Reward period amount</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setRoiLimit</h6>
+
+      <p>Sets ROI Limit for chains. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_roiLimit</td>
+            <td>uint256</td>
+            <td>reward per period</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setSettingContract</h6>
+
+      <p>Sets Setting contract address. Only owner can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_settingContract</td>
+            <td>address</td>
+            <td>Setting Contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setSilverChainAddress</h6>
+
+      <p>Sets Silver chain address. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_silverChainAddress</td>
+            <td>address</td>
+            <td>Silver chain address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setUsdt</h6>
+
+      <p>Sets USDT token address. Only setting contract can set this value</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_usdt</td>
+            <td>address</td>
+            <td>USDT Token address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>tokenLastActionDay</h6>
+
+      <p><strong>**Add Documentation for the method here**</strong></p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>transferBooster</h6>
+
+      <p>
+        User can transfer booster to anyother user. Before transfer of booster,
+        this method will pay all due upkeep amount of new owner and claim all
+        amount of new owner's chains
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>to</td>
+            <td>address</td>
+            <td>User address</td>
+          </tr>
+          <tr>
+            <td>boosterId</td>
+            <td>uint256</td>
+            <td>Transfered Booster id</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>transferOwnership</h6>
+
+      <p>
+        Transfers ownership of the contract to a new account (`newOwner`). Can
+        only be called by the current owner.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>newOwner</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>upgradeTo</h6>
+
+      <p>
+        Upgrade the implementation of the proxy to `newImplementation`. Calls
+        {_authorizeUpgrade}. Emits an {Upgraded} event.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>newImplementation</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>upgradeToAndCall</h6>
+
+      <p>
+        Upgrade the implementation of the proxy to `newImplementation`, and
+        subsequently execute the function call encoded in `data`. Calls
+        {_authorizeUpgrade}. Emits an {Upgraded} event.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>newImplementation</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>data</td>
+            <td>bytes</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>withdrawCurrency</h6>
+
+      <p>
+        Withdraw currency balance from this contrat and can send to any address.
+        Only Owner can call this method.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_destionation</td>
+            <td>address</td>
+            <td>User address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>withdrawToken</h6>
+
+      <p>
+        Withdraw any token balance from this contrat and can send to any
+        address. Only Owner can call this method.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenAddress</td>
+            <td>address</td>
+            <td>Token Address</td>
+          </tr>
+          <tr>
+            <td>_destionation</td>
+            <td>address</td>
+            <td>User address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>undefined</h6>
+
+      <p><strong>**Add Documentation for the method here**</strong></p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+    </div>
+  </body>
+</html>

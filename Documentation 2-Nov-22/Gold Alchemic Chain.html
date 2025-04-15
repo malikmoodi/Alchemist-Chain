@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alchemic Gold Chain Document</title>
+    <style>
+      #ethdoc-viewer {
+        font-size: 0.8em;
+        padding: 1em;
+      }
+      #ethdoc-viewer .lead {
+        font-size: 1em;
+      }
+      #ethdoc-viewer table {
+        width: 50%;
+      }
+      #ethdoc-viewer hr {
+        margin: 0;
+        margin-bottom: 0.5rem;
+      }
+      #ethdoc-viewer p {
+        margin-bottom: 0.5rem;
+      }
+      body {
+        background-color: #222336;
+        font-family: sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      table,
+      tr,
+      td {
+        color: #fff;
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      hr {
+        border-color: #1f1f31;
+        opacity: 0.2;
+      }
+      p {
+        opacity: 0.5;
+        font-weight: normal;
+      }
+      table {
+        border: 1px solid #fff;
+        text-align: left;
+        border-collapse: collapse;
+      }
+      table thead tr th {
+        padding: 10px 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      table tbody tr td {
+        padding: 10px 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ethdoc-viewer">
+      <h3>Alchemic Gold Chain</h3>
+
+      <br />
+      <p><strong>Functions</strong></p>
+
+      <hr />
+      <h6>constructor</h6>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>fallback</h6>
+
+      <p><strong>**Add Documentation for the method here**</strong></p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>approve</h6>
+
+      <p>See {IERC721-approve}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>to</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>balanceOf</h6>
+
+      <p>See {IERC721-balanceOf}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>owner</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>burn</h6>
+
+      <p>
+        This method can burn chain, and remove it from User chain list array.
+        Only Managers or owner can burn chain
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token ID of chain</td>
+          </tr>
+          <tr>
+            <td>owner</td>
+            <td>address</td>
+            <td>Owner of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>calculateRewardsToken</h6>
+
+      <p>
+        Calculates reward of chain, it calculates reward from last claim time to
+        present time
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token ID of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>rewards</td>
+            <td>uint256</td>
+            <td>Reward amount of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>claimRewardsToken</h6>
+
+      <p>
+        Claims reward of chain, and update last claim time of chain and total
+        claim amount
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token ID of chain</td>
+          </tr>
+          <tr>
+            <td>amount</td>
+            <td>uint256</td>
+            <td>amount to be claim</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>createChain</h6>
+
+      <p>
+        createChain: Only Gold chain manager can call this method. Saves detail
+        of Chain against user address and chain token Id.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>to</td>
+            <td>address</td>
+            <td>Address of user</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>Name of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_tokenId</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getApproved</h6>
+
+      <p>See {IERC721-getApproved}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getChainDetails</h6>
+
+      <p>
+        Returns specific chain's detail. Chain's name, total claimed amount,
+        last claim time and time of creation.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td>Token id of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>tuple</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getGoldChainManager</h6>
+
+      <p>Returns Gold chain manager contract address.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldChainManager</td>
+            <td>address</td>
+            <td>Gold chain manager contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getLastClaimtime</h6>
+
+      <p>
+        Returns last claim time of chain. Chain(token id) must exist other wise
+        it revert error.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_tokenId</td>
+            <td>uint256</td>
+            <td>Token ID of chain</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_lastClaimTime</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getRewardPerPeriod</h6>
+
+      <p>Returns reward amount per period of Silver chain.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_rewardsPerPeriod</td>
+            <td>uint256</td>
+            <td>Reward per period</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getRewardPeriod</h6>
+
+      <p>Returns reward period of Silver chain in days</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_rewardPeriod</td>
+            <td>uint256</td>
+            <td>Reward period</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getSettingContract</h6>
+
+      <p>Returns Setting contract address.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_settingContract</td>
+            <td>address</td>
+            <td>Setting contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getTokenBalance</h6>
+
+      <p>Returns any token balance of contract.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_tokenAddress</td>
+            <td>address</td>
+            <td>Token contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_balance</td>
+            <td>uint256</td>
+            <td>Token Balance</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getUserChains</h6>
+
+      <p>Returns User chains count.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>user</td>
+            <td>address</td>
+            <td>User address, owner of chains</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>chains</td>
+            <td>uint256[]</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getUserDetails</h6>
+
+      <p>
+        Returns User's chain details. Chain token ids, total claimed amount,
+        last claim time.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>user</td>
+            <td>address</td>
+            <td>User address, owner of chains</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>tuple</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>getWalletLimit</h6>
+
+      <p>
+        Returns wallet limit of silver chain, User can create silver chains upto
+        this limit.
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_walletLimit</td>
+            <td>uint256</td>
+            <td>Wallet limit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>initialize</h6>
+
+      <p>
+        Initialize: Deploy Alchemic Gold Chain and sets value of
+        rewardsPerPeriod, rewardPeriod and perWalletLimit
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>isApprovedForAll</h6>
+
+      <p>See {IERC721-isApprovedForAll}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>owner</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>operator</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>bool</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>name</h6>
+
+      <p>See {IERC721Metadata-name}.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>string</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>owner</h6>
+
+      <p>Returns the address of the current owner.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>ownerOf</h6>
+
+      <p>See {IERC721-ownerOf}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>pause</h6>
+
+      <p>pause: This method is used to Pause contract to transfer chain.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>paused</h6>
+
+      <p>Returns true if the contract is paused, and false otherwise.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>bool</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>proxiableUUID</h6>
+
+      <p>
+        Implementation of the ERC1822 {proxiableUUID} function. This returns the
+        storage slot used by the implementation. It is used to validate that the
+        this implementation remains valid after an upgrade. IMPORTANT: A proxy
+        pointing at a proxiable contract should not be considered proxiable
+        itself, because this risks bricking a proxy that upgrades to it, by
+        delegating to itself until out of gas. Thus it is critical that this
+        function revert if invoked through a proxy. This is guaranteed by the
+        `notDelegated` modifier.
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>bytes32</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>renounceOwnership</h6>
+
+      <p>
+        Leaves the contract without owner. It will not be possible to call
+        `onlyOwner` functions anymore. Can only be called by the current owner.
+        NOTE: Renouncing ownership will leave the contract without an owner,
+        thereby removing any functionality that is only available to the owner.
+      </p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>safeTransferFrom</h6>
+
+      <p>See {IERC721-safeTransferFrom}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>from</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>to</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>safeTransferFrom</h6>
+
+      <p>See {IERC721-safeTransferFrom}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>from</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>to</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>data</td>
+            <td>bytes</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setApprovalForAll</h6>
+
+      <p>See {IERC721-setApprovalForAll}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>operator</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>approved</td>
+            <td>bool</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setGoldChainManager</h6>
+
+      <p>
+        Sets Gold chain manager address. Only Setting contract can call this
+        method.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_goldChainManager</td>
+            <td>address</td>
+            <td>Gold chain manager address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setRewardPerPeriod</h6>
+
+      <p>
+        Sets reward amount per period of Silver chain. Only Setting contract can
+        call this method.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>reward</td>
+            <td>uint256</td>
+            <td>Reward per period</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setRewardPeriod</h6>
+
+      <p>
+        Sets reward period of Silver chain in days. Only Setting contract can
+        call this method.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_rewardPeriod</td>
+            <td>uint256</td>
+            <td>Wallet limit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setSettingContract</h6>
+
+      <p>Sets Setting contract address.Only owner can call this method.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_settingContract</td>
+            <td>address</td>
+            <td>Setting contract address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>setWalletLimit</h6>
+
+      <p>
+        Sets wallet limit of silver chain, User can create silver chains upto
+        this limit. Only Setting contract can call this method.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_walletLimit</td>
+            <td>uint256</td>
+            <td>Wallet limit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>supportsInterface</h6>
+
+      <p>See {IERC165-supportsInterface}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>interfaceId</td>
+            <td>bytes4</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>bool</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>symbol</h6>
+
+      <p>See {IERC721Metadata-symbol}.</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>string</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>tokenURI</h6>
+
+      <p>See {IERC721Metadata-tokenURI}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>string</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+      <h6>transferFrom</h6>
+
+      <p>See {IERC721-transferFrom}.</p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>from</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>to</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>tokenId</td>
+            <td>uint256</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>transferOwnership</h6>
+
+      <p>
+        Transfers ownership of the contract to a new account (`newOwner`). Can
+        only be called by the current owner.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>newOwner</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>unpause</h6>
+
+      <p>unpause: This method is used to Unpause contract to transfer chain</p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>upgradeTo</h6>
+
+      <p>
+        Upgrade the implementation of the proxy to `newImplementation`. Calls
+        {_authorizeUpgrade}. Emits an {Upgraded} event.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>newImplementation</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>upgradeToAndCall</h6>
+
+      <p>
+        Upgrade the implementation of the proxy to `newImplementation`, and
+        subsequently execute the function call encoded in `data`. Calls
+        {_authorizeUpgrade}. Emits an {Upgraded} event.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>newImplementation</td>
+            <td>address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>data</td>
+            <td>bytes</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>withdrawCurrency</h6>
+
+      <p>
+        Withdraw currency balance from this contrat and can send to any address.
+        Only Owner can call this method.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_destionation</td>
+            <td>address</td>
+            <td>User address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>withdrawToken</h6>
+
+      <p>
+        Withdraw any token balance from this contrat and can send to any
+        address. Only Owner can call this method.
+      </p>
+
+      <table class="table table-sm table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tokenAddress</td>
+            <td>address</td>
+            <td>Token Address</td>
+          </tr>
+          <tr>
+            <td>_destionation</td>
+            <td>address</td>
+            <td>User address</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+
+      <hr />
+      <h6>undefined</h6>
+
+      <p><strong>**Add Documentation for the method here**</strong></p>
+
+      <p>No parameters</p>
+
+      <p>Returns:</p>
+
+      <p>No parameters</p>
+    </div>
+  </body>
+</html>
